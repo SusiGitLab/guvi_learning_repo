@@ -1,0 +1,14 @@
+# docker-compose file for java:
+version: '3'
+services:
+  java-app: # service name & you can give any name:
+    image: ravivarman46/java-app #yours image name:
+    container_name: java-app
+    ports:
+      - 8080:8080 # port mapping
+    volumes:
+      - java-vol:/app/
+
+volumes:
+  java-vol:
+    external: true 
