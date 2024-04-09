@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+   mynginxcont_cus:  
+      image: dock_nginx_cus 
+      ports:
+       - "5000:80"
+      volumes:
+       - mynginxvol:/var/opt/nginx
+volumes:
+   mynginxvol: 
+

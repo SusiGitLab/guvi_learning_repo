@@ -1,0 +1,11 @@
+# Base image (official Nginx image)
+FROM nginx:latest
+
+# (Optional) Copy custom HTML content
+COPY index.html /usr/share/nginx/html
+
+# Expose the default Nginx port (80)
+EXPOSE 80
+
+# Run the Nginx service
+CMD ["nginx", "-g", "daemon off;"]
